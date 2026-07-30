@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oregon Coast Anniversary · Matt and Thais</title>
+<meta name="description" content="Thursday July 30 to Monday August 3, 2026. Five days down the 101, built around three sunsets you can walk to.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#14211f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Oregon Coast">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2314211f'/%3E%3Cpath d='M14 52h36L38 20l-5-8-4 7-3 6z' fill='%23e0964a'/%3E%3Ccircle cx='47' cy='20' r='7' fill='%23e0964a' opacity='.7'/%3E%3C/svg%3E">
+
+<style>
+/* ---------- tokens ---------- */
+:root{
+  --ink:#14211f;
+  --ink-soft:#576964;
+  --ink-faint:#8a9994;
+  --teal:#1a6f63;
+  --teal-deep:#0d3a35;
+  --rust:#b0512f;
+  --amber:#dd9448;
+  --coral:#d3714f;
+  --paper:#fbf9f5;
+  --paper-2:#f5f1e8;
+  --sand:#efe7d8;
+  --line:rgba(20,33,31,.11);
+  --line-2:rgba(20,33,31,.06);
+  --shadow:0 1px 2px rgba(20,33,31,.04),0 8px 24px -12px rgba(20,33,31,.16);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+  --sans:"Avenir Next",Avenir,"Segoe UI",-apple-system,BlinkMacSystemFont,system-ui,"Helvetica Neue",Arial,sans-serif;
+  --wrap:min(100% - 2.5rem, 44rem);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --ink:#eae5db; --ink-soft:#a9b5b0; --ink-faint:#7d8b86;
+    --teal:#63bfae; --teal-deep:#bfe3da; --rust:#e79170; --amber:#e8ab63;
+    --paper:#101a19; --paper-2:#162322; --sand:#1b2a28;
+    --line:rgba(234,229,219,.14); --line-2:rgba(234,229,219,.07);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.7);
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:1.0625rem;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+img,svg{max-width:100%;display:block}
+
+/* ---------- hero ---------- */
+.hero{position:relative;isolation:isolate;background:#17323d;overflow:hidden}
+.hero-art{position:absolute;inset:0;width:100%;height:100%}
+.hero-art svg{width:100%;height:100%}
+.hero-inner{
+  position:relative;z-index:2;
+  height:clamp(23rem,60svh,34rem);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:2rem 0 1.75rem;
+}
+.hero-scrim{
+  position:absolute;inset:auto 0 0 0;height:58%;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(8,17,20,.88) 0%,rgba(8,17,20,.62) 30%,rgba(8,17,20,.2) 66%,transparent 100%);
+}
+.hero-copy{width:var(--wrap);margin-inline:auto}
+.hero-eyebrow{
+  font-family:var(--sans);font-size:.6875rem;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:#e8c79a;margin:0 0 .85rem;
+}
+.hero h1{
+  margin:0;font-weight:400;color:#fffdf8;line-height:1.02;
+  font-size:clamp(2.5rem,10.5vw,4.25rem);letter-spacing:-.02em;
+  text-wrap:balance;text-shadow:0 2px 30px rgba(0,0,0,.35);
+}
+.hero h1 em{font-style:italic;color:#f6d3a4}
+.hero-meta{
+  margin:1rem 0 0;display:flex;flex-direction:column;align-items:flex-start;gap:.12rem;
+  font-family:var(--sans);font-size:.8125rem;line-height:1.5;color:rgba(255,253,248,.84);
+}
+.hero-meta .dot{display:none}
+.hero-meta strong{font-weight:600;color:#fffdf8;letter-spacing:.01em}
+@media (min-width:34rem){
+  .hero-meta{flex-direction:row;flex-wrap:wrap;align-items:center;gap:.5rem .85rem}
+  .hero-meta .dot{display:block;width:4px;height:4px;border-radius:50%;background:rgba(255,253,248,.42)}
+}
+
+/* ---------- sticky nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-scroll{
+  width:var(--wrap);margin-inline:auto;display:flex;gap:.4rem;
+  overflow-x:auto;scrollbar-width:none;padding:.55rem 0;
+  -webkit-overflow-scrolling:touch;
+}
+.nav-scroll::-webkit-scrollbar{display:none}
+.nav a{
+  flex:0 0 auto;font-family:var(--sans);font-size:.75rem;font-weight:600;
+  letter-spacing:.04em;text-decoration:none;color:var(--ink-soft);
+  padding:.4rem .7rem;border-radius:999px;border:1px solid transparent;
+  transition:color .18s,background .18s,border-color .18s;white-space:nowrap;
+}
+.nav a:hover,.nav a:focus-visible{color:var(--teal);background:var(--paper-2);border-color:var(--line)}
+
+/* ---------- layout ---------- */
+main{width:var(--wrap);margin:0 auto;padding-bottom:1rem}
+section{scroll-margin-top:4.25rem}
+.band{padding:2.9rem 0 .5rem}
+.eyebrow{
+  font-family:var(--sans);font-size:.6875rem;font-weight:700;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--teal);margin:0 0 .3rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.eyebrow svg{width:15px;height:15px;flex:0 0 auto;opacity:.9}
+.lede{
+  font-family:var(--sans);font-size:.8125rem;color:var(--ink-faint);
+  margin:.15rem 0 1.35rem;line-height:1.5;
+}
+h2{
+  font-weight:400;font-size:clamp(1.5rem,5.4vw,1.9rem);letter-spacing:-.015em;
+  line-height:1.14;margin:0;text-wrap:balance;
+}
+h3{
+  font-family:var(--sans);font-size:.8125rem;font-weight:700;letter-spacing:.03em;
+  margin:0;color:var(--ink);
+}
+
+/* ---------- cards ---------- */
+.grid{display:grid;gap:.7rem}
+.g2{grid-template-columns:1fr}
+@media (min-width:34rem){.g2{grid-template-columns:1fr 1fr}}
+.card{
+  background:var(--paper-2);border:1px solid var(--line-2);border-radius:14px;
+  padding:.95rem 1.05rem;
+}
+.card-top{display:flex;align-items:baseline;justify-content:space-between;gap:.75rem;margin-bottom:.3rem}
+.card p{margin:0;font-size:.9375rem;line-height:1.5;color:var(--ink-soft)}
+.tag{
+  flex:0 0 auto;font-family:var(--sans);font-size:.625rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--teal);
+  background:color-mix(in srgb,var(--teal) 11%,transparent);
+  padding:.24rem .5rem;border-radius:5px;
+}
+.card .night{
+  font-family:var(--sans);font-size:.6875rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:.3rem;
+}
+.card .place{font-size:1.0625rem;line-height:1.3;display:block;margin-bottom:.15rem}
+.price{font-family:var(--sans);font-size:.75rem;color:var(--ink-faint)}
+
+/* ---------- callout ---------- */
+.note{
+  margin:1.15rem 0 0;padding:.9rem 1.05rem;border-radius:0 12px 12px 0;
+  border-left:3px solid var(--rust);background:var(--sand);
+  font-size:.9375rem;line-height:1.55;color:var(--ink-soft);
+}
+.note b{color:var(--rust);font-weight:700}
+
+/* ---------- tides ---------- */
+.tide-card{
+  background:var(--paper-2);border:1px solid var(--line-2);border-radius:14px;padding:.9rem 1rem 1rem;
+}
+.tide-day{
+  font-family:var(--sans);font-size:.6875rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-faint);margin-bottom:.6rem;
+}
+.tide-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.6rem}
+.pill{
+  font-family:var(--sans);font-size:.75rem;font-weight:600;font-variant-numeric:tabular-nums;
+  padding:.35rem .6rem;border-radius:8px;display:inline-flex;align-items:center;gap:.4rem;
+}
+.pill svg{width:13px;height:13px;flex:0 0 auto}
+.pill .lbl{font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.72}
+.pill-low{background:color-mix(in srgb,var(--amber) 16%,transparent);color:color-mix(in srgb,var(--rust) 88%,var(--ink))}
+.pill-high{background:color-mix(in srgb,var(--teal) 13%,transparent);color:var(--teal-deep)}
+@media (prefers-color-scheme:dark){.pill-high{color:var(--teal)}}
+.pill.best{box-shadow:inset 0 0 0 1.5px currentColor}
+.tide-for{font-size:.875rem;line-height:1.5;color:var(--ink-soft);margin:0}
+
+/* ---------- days ---------- */
+.day{padding:2.6rem 0 .25rem;border-top:1px solid var(--line)}
+.day:first-of-type{border-top:0}
+.day-head{display:flex;align-items:flex-start;gap:.9rem;margin-bottom:1.25rem}
+.badge{
+  flex:0 0 auto;width:46px;height:46px;border-radius:50%;
+  background:var(--paper-2);border:1px solid var(--line);
+  display:grid;place-items:center;color:var(--teal);
+}
+.badge svg{width:25px;height:25px}
+.day-titles{min-width:0}
+.day-titles .sub{
+  font-family:var(--sans);font-size:.8125rem;color:var(--ink-faint);
+  margin:.3rem 0 0;line-height:1.45;
+}
+.tl{margin:0;padding:0;list-style:none}
+.tl li{
+  display:grid;grid-template-columns:5rem 1fr;gap:.35rem .9rem;
+  padding:.5rem 0;border-top:1px solid var(--line-2);
+  align-items:start;
+}
+.tl li:first-child{border-top:0;padding-top:0}
+.tl .t{
+  font-family:var(--sans);font-size:.8125rem;font-weight:700;color:var(--teal);
+  font-variant-numeric:tabular-nums;padding-top:.16rem;letter-spacing:.01em;
+}
+.tl .t.word{font-size:.625rem;letter-spacing:.11em;text-transform:uppercase;padding-top:.34rem}
+.tl .d{font-size:.9688rem;line-height:1.52}
+.tl .d .fine{display:block;font-family:var(--sans);font-size:.8125rem;color:var(--ink-faint);margin-top:.15rem;line-height:1.45}
+.anchor{color:var(--ink);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--teal) 34%,transparent);padding-bottom:.02em}
+.anchor:hover,.anchor:focus-visible{color:var(--teal);border-bottom-color:var(--teal)}
+.anchor svg{display:inline-block;width:11px;height:11px;margin-left:.22rem;vertical-align:baseline;opacity:.55}
+.anchor:hover svg{opacity:1}
+
+/* ---------- sunsets ---------- */
+.sunsets{display:grid;gap:.7rem;grid-template-columns:1fr}
+@media (min-width:38rem){.sunsets{grid-template-columns:repeat(3,1fr)}}
+.sunset{
+  border:1px solid var(--line-2);border-radius:14px;overflow:hidden;
+  background:var(--paper-2);box-shadow:var(--shadow);
+}
+.sunset .art{aspect-ratio:16/9;background:#1d3540}
+.sunset .art svg{width:100%;height:100%}
+.sunset .body{padding:.8rem .95rem .95rem}
+.sunset .when{
+  font-family:var(--sans);font-size:.625rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-faint);
+}
+.sunset .name{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;margin:.2rem 0 .2rem}
+.sunset .name span:first-child{font-size:1.0625rem;line-height:1.2}
+.sunset .time{font-family:var(--sans);font-size:.875rem;font-weight:700;color:var(--amber);font-variant-numeric:tabular-nums}
+.sunset p{margin:0;font-family:var(--sans);font-size:.8125rem;color:var(--ink-soft);line-height:1.45}
+.kicker{
+  margin:1.2rem 0 0;font-size:1.0625rem;font-style:italic;color:var(--ink-soft);
+  text-align:center;text-wrap:balance;
+}
+
+/* ---------- checklist ---------- */
+.checks{margin:0;padding:0;list-style:none;display:grid;gap:.55rem;grid-template-columns:1fr}
+@media (min-width:38rem){.checks{grid-template-columns:1fr 1fr}}
+.checks li{
+  display:flex;align-items:center;gap:.7rem;padding:.7rem .85rem;
+  background:var(--paper-2);border:1px solid var(--line-2);border-radius:11px;
+}
+.checks svg{flex:0 0 auto;width:17px;height:17px;color:var(--teal)}
+.checks .what{flex:1 1 auto;font-size:.9375rem;line-height:1.35;min-width:0}
+.checks .where{
+  flex:0 0 auto;font-family:var(--sans);font-size:.6875rem;font-weight:700;
+  letter-spacing:.05em;color:var(--ink-faint);font-variant-numeric:tabular-nums;text-align:right;
+}
+.packing{margin:0;padding:0;list-style:none;display:grid;gap:.1rem}
+.packing li{
+  display:grid;grid-template-columns:1.4rem 1fr;gap:.55rem;align-items:start;
+  padding:.62rem 0;border-top:1px solid var(--line-2);font-size:.9688rem;line-height:1.5;
+}
+.packing li:first-child{border-top:0}
+.packing svg{width:16px;height:16px;color:var(--teal);margin-top:.22rem}
+
+/* ---------- rules / footer ---------- */
+.wave{display:block;width:100%;height:14px;color:var(--line);margin:2.6rem 0 0}
+.wave svg{width:100%;height:100%}
+footer{margin-top:2.6rem;position:relative;background:#12262c;color:#cfd8d4;overflow:hidden}
+footer .art{position:absolute;inset:0}
+footer .art svg{width:100%;height:100%}
+footer .inner{
+  position:relative;z-index:2;width:var(--wrap);margin-inline:auto;
+  padding:6.5rem 0 1.75rem;text-align:center;
+}
+footer .sig{font-size:1.25rem;font-style:italic;color:#fdf4e6;margin:0 0 .4rem}
+footer .fine{font-family:var(--sans);font-size:.6875rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(207,216,212,.62);margin:0}
+
+/* ---------- print ---------- */
+@media print{
+  :root{--paper:#fff;--paper-2:#fff;--ink:#000;--ink-soft:#333;--line:#ccc;--line-2:#e5e5e5;--shadow:none}
+  .nav,.hero-art,footer .art{display:none}
+  .hero{background:#fff}.hero-scrim{display:none}
+  .hero h1,.hero-eyebrow,.hero-meta{color:#000;text-shadow:none}
+  .hero-inner{height:auto;padding:1rem 0}
+  .hero h1 em{color:#000}.hero-meta strong{color:#000}
+  footer{background:#fff;color:#000;margin-top:1.5rem;border-top:1px solid #ccc}
+  footer .inner{padding:1rem 0}footer .sig{color:#000}
+  .day,section{break-inside:avoid;page-break-inside:avoid}
+  .sunset .art{display:none}
+  a{color:#000;text-decoration:none}
+  .anchor svg{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ HERO ══════════════ -->
+<header class="hero">
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" role="presentation">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#14303d"/>
+          <stop offset=".28" stop-color="#2e5560"/>
+          <stop offset=".48" stop-color="#6f7d76"/>
+          <stop offset=".62" stop-color="#c48b5c"/>
+          <stop offset="1" stop-color="#f3c489"/>
+        </linearGradient>
+        <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#e0aa74"/>
+          <stop offset=".22" stop-color="#5d7a76"/>
+          <stop offset="1" stop-color="#22434a"/>
+        </linearGradient>
+        <linearGradient id="beach" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#a4938a"/>
+          <stop offset=".45" stop-color="#8d8177"/>
+          <stop offset="1" stop-color="#5f5d57"/>
+        </linearGradient>
+        <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+          <stop offset="0" stop-color="#ffe4b0" stop-opacity=".85"/>
+          <stop offset=".45" stop-color="#f6bb74" stop-opacity=".38"/>
+          <stop offset="1" stop-color="#f0a95f" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="refl" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffd79a" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#ffd79a" stop-opacity="0"/>
+        </linearGradient>
+        <clipPath id="clipSea"><rect x="0" y="470" width="1440" height="152"/></clipPath>
+        <clipPath id="clipSand"><rect x="0" y="620" width="1440" height="280"/></clipPath>
+      </defs>
+
+      <!-- sky -->
+      <rect width="1440" height="472" fill="url(#sky)"/>
+      <circle cx="620" cy="470" r="280" fill="url(#glow)"/>
+      <circle cx="620" cy="466" r="54" fill="#ffe9c0"/>
+
+      <!-- high thin clouds -->
+      <g fill="#f0cfa4" opacity=".32">
+        <rect x="120" y="228" width="380" height="7" rx="3.5"/>
+        <rect x="250" y="262" width="520" height="6" rx="3"/>
+        <rect x="660" y="196" width="300" height="6" rx="3"/>
+        <rect x="880" y="250" width="440" height="7" rx="3.5"/>
+        <rect x="1000" y="292" width="320" height="6" rx="3"/>
+        <rect x="420" y="320" width="360" height="5" rx="2.5"/>
+      </g>
+      <g fill="#fff4e0" opacity=".15">
+        <ellipse cx="380" cy="366" rx="340" ry="15"/>
+        <ellipse cx="1090" cy="392" rx="360" ry="13"/>
+      </g>
+
+      <!-- far sea stacks (fog layer) -->
+      <g fill="#84999５" opacity=".38">
+        <path d="M1188 472l6-42 8-26 10-16 9 18 8 30 7 36z"/>
+        <path d="M1268 472l5-30 7-20 8-12 7 14 7 22 6 26z"/>
+        <path d="M1344 472l4-22 6-16 7-10 6 12 6 16 5 20z"/>
+      </g>
+
+      <!-- mid sea stacks -->
+      <g fill="#3d6067" opacity=".68">
+        <path d="M256 472l7-54 9-36 12-24 10 20 10 34 9 60z"/>
+        <path d="M1096 472l6-44 8-30 10-20 9 18 9 30 8 46z"/>
+      </g>
+
+      <!-- left headland with spruce ridge -->
+      <g fill="#16302f">
+        <path d="M0 472V262l40-14 50 10 52 22 50 30 42 38 34 46 22 44 12 34z"/>
+        <g fill="#0f2523">
+          <path d="M28 254l9-30 9 30zM54 256l8-26 8 26zM80 262l8-26 8 26zM106 272l7-24 7 24zM132 286l7-22 7 22zM158 304l7-22 7 22zM184 326l6-20 6 20zM210 352l6-20 6 20zM234 382l6-18 6 18z"/>
+        </g>
+      </g>
+
+      <!-- HAYSTACK ROCK — broad craggy monolith, twin crown -->
+      <g fill="#122829">
+        <path d="M676 622l6-46 10-32 10-24 8-12 8 14 8 26 8 34 6 40z"/>
+        <path d="M745 622l5-58 8-44 12-38 14-32 14-28 12-22 10-16 8-8 8 6 8 18 8 24 8-12 10 16 12 32 12 40 12 48 12 56 14 60z"/>
+        <path d="M1032 622l6-56 10-42 12-30 10-16 10 20 10 32 10 44 12 48z"/>
+      </g>
+      <!-- rock crag texture -->
+      <g stroke="#2f4a4c" stroke-width="2.2" opacity=".45" fill="none" stroke-linecap="round">
+        <path d="M790 560l18-30 14 22"/>
+        <path d="M812 486l16-26 12 20"/>
+        <path d="M840 412l14-22 10 16"/>
+        <path d="M862 348l10-16 10 14"/>
+        <path d="M912 470l14-24 12 18"/>
+        <path d="M936 546l16-26 12 20"/>
+      </g>
+      <!-- talus base -->
+      <g fill="#0d2021">
+        <path d="M722 622q40-16 92-14t76 12z"/>
+        <path d="M900 622q34-14 78-12t56 12z"/>
+      </g>
+
+      <!-- birds -->
+      <g stroke="#1a2f30" stroke-width="2.8" fill="none" stroke-linecap="round" opacity=".68">
+        <path d="M560 196l12-10 12 10"/>
+        <path d="M614 164l10-8 10 8"/>
+        <path d="M660 208l11-9 11 9"/>
+        <path d="M516 246l9-7 9 7"/>
+        <path d="M1004 190l10-8 10 8"/>
+      </g>
+
+      <!-- ocean -->
+      <rect x="0" y="470" width="1440" height="154" fill="url(#sea)"/>
+      <g clip-path="url(#clipSea)">
+        <rect x="584" y="470" width="72" height="154" fill="url(#refl)"/>
+        <g stroke="#ffdcaa" stroke-width="2" opacity=".2" fill="none">
+          <path d="M0 500h320M370 500h400M820 500h620"/>
+          <path d="M60 522h380M490 522h280M830 522h610"/>
+          <path d="M0 546h260M320 546h460M840 546h600"/>
+          <path d="M100 570h420M580 570h240M880 570h560"/>
+        </g>
+        <g fill="#e8f0ea" opacity=".45">
+          <rect x="0" y="600" width="1440" height="6" rx="3"/>
+          <rect x="120" y="586" width="420" height="4" rx="2"/>
+          <rect x="700" y="582" width="520" height="4" rx="2"/>
+        </g>
+      </g>
+
+      <!-- wet sand -->
+      <rect x="0" y="620" width="1440" height="280" fill="url(#beach)"/>
+      <g clip-path="url(#clipSand)">
+        <rect x="548" y="620" width="146" height="280" fill="url(#refl)" opacity=".6"/>
+        <g fill="#0f2223" opacity=".22">
+          <ellipse cx="884" cy="632" rx="150" ry="11"/>
+          <ellipse cx="712" cy="628" rx="46" ry="6"/>
+          <ellipse cx="1076" cy="630" rx="58" ry="7"/>
+        </g>
+        <g stroke="#d3c1a6" stroke-width="2.5" opacity=".18" fill="none">
+          <path d="M-20 664c180 14 380-6 560 8s420 12 640-4M-20 712c220 16 420-8 640 6s400 10 600-6M-20 770c260 18 460-10 700 6s340 8 620-4M-20 836c240 16 480-12 720 6s300 8 600-4"/>
+        </g>
+        <g fill="#0c1a1b" opacity=".45">
+          <ellipse cx="1210" cy="778" rx="50" ry="14"/>
+          <ellipse cx="1288" cy="806" rx="28" ry="9"/>
+          <ellipse cx="150" cy="812" rx="60" ry="15"/>
+          <ellipse cx="252" cy="852" rx="34" ry="10"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">Five days down the 101</p>
+      <h1>Oregon Coast <em>Anniversary</em></h1>
+      <p class="hero-meta">
+        <strong>Matt &amp; Thais</strong>
+        <span class="dot"></span>
+        <span>Thursday July 30 &ndash; Monday August 3, 2026</span>
+        <span class="dot"></span>
+        <span>Medford in, Portland out</span>
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav class="nav" aria-label="Jump to a day">
+  <div class="nav-scroll">
+    <a href="#locked">Booked</a>
+    <a href="#tides">Tides</a>
+    <a href="#thu">Thu 7/30</a>
+    <a href="#fri">Fri 7/31</a>
+    <a href="#sat">Sat 8/1</a>
+    <a href="#sun">Sun 8/2</a>
+    <a href="#mon">Mon 8/3</a>
+    <a href="#sunsets">Sunsets</a>
+    <a href="#packing">Pack</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ══════════════ LOCKED IN ══════════════ -->
+<section id="locked" class="band">
+  <p class="eyebrow">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+    Locked in
+  </p>
+  <h2>Everything below is booked</h2>
+  <p class="lede">Nothing here needs another decision.</p>
+
+  <div class="grid g2">
+    <div class="card">
+      <div class="card-top"><h3>Flights</h3><span class="tag">Booked</span></div>
+      <p>United SAN to SFO to MFR, lands 12:30 PM Thu 7/30. Alaska PDX to SAN, 7:35 AM Mon 8/3.</p>
+    </div>
+    <div class="card">
+      <div class="card-top"><h3>Car</h3><span class="tag">Booked</span></div>
+      <p>One way, MFR pickup and PDX drop.</p>
+    </div>
+  </div>
+
+  <p class="eyebrow" style="margin-top:1.9rem">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18h18"/><path d="M7 10V7h10v3"/></svg>
+    Four nights
+  </p>
+  <div class="grid g2">
+    <div class="card">
+      <span class="night">Thu 7/30</span>
+      <span class="place">Jot&rsquo;s Resort</span>
+      <p>Gold Beach</p>
+    </div>
+    <div class="card">
+      <span class="night">Fri 7/31</span>
+      <span class="place">Two Capes Lookout dome</span>
+      <p>Pacific City</p>
+    </div>
+    <div class="card">
+      <span class="night">Sat 8/1</span>
+      <span class="place">Ecola Creek Lodge</span>
+      <p>Cannon Beach &middot; King Suite #1 &middot; <span class="price">$429.12</span></p>
+    </div>
+    <div class="card">
+      <span class="night">Sun 8/2</span>
+      <span class="place">Hyatt Regency</span>
+      <p>Portland</p>
+    </div>
+  </div>
+
+  <p class="note"><b>One thing about the Hyatt.</b> It&rsquo;s downtown by the Convention Center, not an airport property. About 20 minutes to PDX with no traffic at 5 AM, plus the rental return. Monday morning is built around that below.</p>
+</section>
+
+<div class="wave" aria-hidden="true"><svg viewBox="0 0 400 14" preserveAspectRatio="none"><path d="M0 7q12.5-7 25 0t25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></div>
+
+<!-- ══════════════ TIDES ══════════════ -->
+<section id="tides" class="band">
+  <p class="eyebrow">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 8c2.5-2.5 5-2.5 7.5 0S17 10.5 22 8"/><path d="M2 14c2.5-2.5 5-2.5 7.5 0S17 16.5 22 14"/><path d="M2 20c2.5-2.5 5-2.5 7.5 0S17 22.5 22 20"/></svg>
+    Tides
+  </p>
+  <h2>What the water is doing</h2>
+  <p class="lede">NOAA predictions, Yaquina station. Times shift only a few minutes north or south of it.</p>
+
+  <div class="grid g2">
+    <div class="tide-card">
+      <div class="tide-day">Thursday 7/30</div>
+      <div class="tide-pills">
+        <span class="pill pill-low"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"/><path d="M6 13l6 6 6-6"/></svg><span class="lbl">Low</span> about 7:00 PM</span>
+        <span class="pill pill-high"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg><span class="lbl">High</span> 2:26 PM</span>
+      </div>
+      <p class="tide-for">Widest sand at Secret Beach right when you drop in.</p>
+    </div>
+
+    <div class="tide-card">
+      <div class="tide-day">Friday 7/31</div>
+      <div class="tide-pills">
+        <span class="pill pill-low"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"/><path d="M6 13l6 6 6-6"/></svg><span class="lbl">Low</span> 8:13 AM &middot; &minus;0.6 ft</span>
+        <span class="pill pill-high best"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg><span class="lbl">High</span> 2:53 PM &middot; 7.3 ft</span>
+      </div>
+      <p class="tide-for">Thor&rsquo;s Well. Go on the rise, not the low.</p>
+    </div>
+
+    <div class="tide-card">
+      <div class="tide-day">Saturday 8/1</div>
+      <div class="tide-pills">
+        <span class="pill pill-low"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"/><path d="M6 13l6 6 6-6"/></svg><span class="lbl">Low</span> 8:58 PM &middot; 2.4 ft</span>
+        <span class="pill pill-high"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg><span class="lbl">High</span> 3:21 PM &middot; 7.5 ft</span>
+      </div>
+      <p class="tide-for">Beach keeps opening through the Haystack sunset.</p>
+    </div>
+
+    <div class="tide-card">
+      <div class="tide-day">Sunday 8/2</div>
+      <div class="tide-pills">
+        <span class="pill pill-low best"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"/><path d="M6 13l6 6 6-6"/></svg><span class="lbl">Low</span> 9:12 AM &middot; 0.2 ft</span>
+        <span class="pill pill-high"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg><span class="lbl">High</span> 3:49 PM &middot; 7.8 ft</span>
+      </div>
+      <p class="tide-for">Haystack tide pools. Best low of the trip.</p>
+    </div>
+  </div>
+
+  <p class="note"><b>Reading the numbers.</b> Low tide means the water has pulled back and the rocks are exposed. High tide means it&rsquo;s all the way in. The feet are measured off the average low mark, so 0.2 ft is very low and 7.3 ft is a lot of water. Tide pools want low. Thor&rsquo;s Well wants high. That&rsquo;s the whole thing.</p>
+</section>
+
+<div class="wave" aria-hidden="true"><svg viewBox="0 0 400 14" preserveAspectRatio="none"><path d="M0 7q12.5-7 25 0t25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></div>
+
+<!-- ══════════════ THURSDAY ══════════════ -->
+<section id="thu" class="day" style="border-top:0;padding-top:2.9rem">
+  <div class="day-head">
+    <span class="badge" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M2 20V9c4.5 0 6 3.5 6 6.5V20"/><path d="M22 20V7c-6 0-8 4.5-8 8.5V20"/><path d="M8 15.5c1.5-2.5 4-2.5 6 0"/></svg>
+    </span>
+    <div class="day-titles">
+      <h2>Thursday, July 30</h2>
+      <p class="sub">Land, drive south, get into the corridor before the light goes.</p>
+    </div>
+  </div>
+  <ul class="tl">
+    <li><span class="t">12:30 PM</span><span class="d">Land at Medford, pick up the car</span></li>
+    <li><span class="t">1:15 PM</span><span class="d">Roll. Medford to Brookings is about 3:45 on 199 and 101</span></li>
+    <li><span class="t">5:30 PM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Natural+Bridges+Viewpoint+Samuel+Boardman+Oregon" target="_blank" rel="noopener">Natural Bridges viewpoint<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a><span class="fine">Weekday, so the lot should be sane</span></span></li>
+    <li><span class="t">6:00 PM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Thunder+Rock+Cove+Oregon" target="_blank" rel="noopener">Thunder Rock Cove<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a>, five minutes up the road</span></li>
+    <li><span class="t">7:15 PM</span><span class="d">Down the trail into <a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Secret+Beach+Samuel+Boardman+Oregon" target="_blank" rel="noopener">Secret Beach<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a><span class="fine">Evening low lands around 7, so you get it at its widest</span></span></li>
+    <li><span class="t">8:41 PM</span><span class="d">Sunset from the floor of the cove</span></li>
+    <li><span class="t">8:50 PM</span><span class="d">Climb out. Headlamps on</span></li>
+    <li><span class="t">9:35 PM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Jots+Resort+Gold+Beach+Oregon" target="_blank" rel="noopener">Jot&rsquo;s Resort, Gold Beach<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></span></li>
+  </ul>
+</section>
+
+<!-- ══════════════ FRIDAY ══════════════ -->
+<section id="fri" class="day">
+  <div class="day-head">
+    <span class="badge" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21h20"/><path d="M4 21c0-5 3.5-8 8-8s8 3 8 8"/><circle cx="12" cy="15" r="3"/><path d="M12 12V8"/><path d="M9 9.5 12 4l3 5.5"/></svg>
+    </span>
+    <div class="day-titles">
+      <h2>Friday, July 31</h2>
+      <p class="sub">The long one. Gold Beach to Pacific City, roughly 5:30 with stops.</p>
+    </div>
+  </div>
+  <ul class="tl">
+    <li><span class="t">8:45 AM</span><span class="d">Out of Gold Beach</span></li>
+    <li><span class="t">12:15 PM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Heceta+Head+Lighthouse+Viewpoint+Oregon" target="_blank" rel="noopener">Heceta Head from the 101 pullout<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a><span class="fine">No fee, no walk up, just the view</span></span></li>
+    <li><span class="t">1:15 PM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Thors+Well+Cape+Perpetua+Oregon" target="_blank" rel="noopener">Cape Perpetua for Thor&rsquo;s Well<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a><span class="fine">High is 2:53, and the hour before high is when it actually drains and spouts. Stay well back from the shelf, it gets swept</span></span></li>
+    <li><span class="t">2:15 PM</span><span class="d">Into <a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Yachats+Oregon" target="_blank" rel="noopener">Yachats<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a> for a short walk and coffee</span></li>
+    <li><span class="t">2:50 PM</span><span class="d">North on 101</span></li>
+    <li><span class="t">5:00 PM</span><span class="d">Check in at <a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Two+Capes+Lookout+Pacific+City+Oregon" target="_blank" rel="noopener">Two Capes Lookout, Pacific City<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></span></li>
+    <li><span class="t word">Dinner</span><span class="d">Takeout back to the dome<span class="fine">West Fish and Chips closes 7. Beach Walk Thai closes 8 and adds 15% on to-go. Doryland Pizza closes 9 and is the easiest to eat in camp chairs. Chester&rsquo;s Market for wine</span></span></li>
+    <li><span class="t">8:52 PM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Cape+Kiwanda+Pacific+City+Oregon" target="_blank" rel="noopener">Cape Kiwanda sunset<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a>. Walk from the dome, no driving</span></li>
+  </ul>
+  <p class="note"><b>If you want Thor&rsquo;s Well at the peak.</b> Stay until 3:00 and you&rsquo;ll reach the dome closer to 5:45 instead of 5:00. Decide on the day, but the rising hour is the better show anyway.</p>
+</section>
+
+<!-- ══════════════ SATURDAY ══════════════ -->
+<section id="sat" class="day">
+  <div class="day-head">
+    <span class="badge" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21h20"/><path d="M2 21l6-9 4 5 3-4 7 8"/><path d="M8 12l2-6 3 4"/><circle cx="18" cy="6" r="2.5"/></svg>
+    </span>
+    <div class="day-titles">
+      <h2>Saturday, August 1</h2>
+      <p class="sub">God&rsquo;s Thumb, Tillamook, then the Haystack sunset.</p>
+    </div>
+  </div>
+  <ul class="tl">
+    <li><span class="t word">Morning</span><span class="d">Slow start at the dome. This is the one you paid for</span></li>
+    <li><span class="t">10:30 AM</span><span class="d">Check out, drive south to Lincoln City</span></li>
+    <li><span class="t">11:15 AM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Gods+Thumb+Trailhead+Lincoln+City+Oregon" target="_blank" rel="noopener">God&rsquo;s Thumb trailhead<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a><span class="fine">Roads End State Park is the backup lot if the road one is full. Real hiking shoes, not trainers</span></span></li>
+    <li><span class="t">1:45 PM</span><span class="d">Lunch in Lincoln City</span></li>
+    <li><span class="t">3:50 PM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Tillamook+Creamery+Oregon" target="_blank" rel="noopener">Tillamook Creamery<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a><span class="fine">Cheese and ice cream, the whole reason it&rsquo;s on the list</span></span></li>
+    <li><span class="t">5:45 PM</span><span class="d">Check in at <a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Ecola+Creek+Lodge+Cannon+Beach+Oregon" target="_blank" rel="noopener">Ecola Creek Lodge, Cannon Beach<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></span></li>
+    <li><span class="t">8:50 PM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Haystack+Rock+Cannon+Beach+Oregon" target="_blank" rel="noopener">Haystack Rock sunset<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a>. Walk from the hotel<span class="fine">Tide is dropping toward a 2.4 ft low at 8:58, so the beach keeps opening while you&rsquo;re out there</span></span></li>
+  </ul>
+  <p class="note"><b>Skip Hug Point today.</b> High tide is 3:21 PM and the cove gets cut off. It only works on a low.</p>
+</section>
+
+<!-- ══════════════ SUNDAY ══════════════ -->
+<section id="sun" class="day">
+  <div class="day-head">
+    <span class="badge" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 13.8 9l6.2-2.2-4.4 5.2 4.4 5.2L13.8 15 12 21.5 10.2 15 4 17.2l4.4-5.2L4 6.8 10.2 9z"/></svg>
+    </span>
+    <div class="day-titles">
+      <h2>Sunday, August 2</h2>
+      <p class="sub">Tide pool morning, slow afternoon, then east to the falls.</p>
+    </div>
+  </div>
+  <ul class="tl">
+    <li><span class="t">8:15 AM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Haystack+Rock+Tide+Pools+Cannon+Beach+Oregon" target="_blank" rel="noopener">Haystack Rock tide pools<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a><span class="fine">Low is 9:12 AM at 0.2 ft, the best low you get all trip. Sea stars, anemones, the full shelf. This is the one thing that can&rsquo;t move</span></span></li>
+    <li><span class="t">10:15 AM</span><span class="d">Back up for breakfast</span></li>
+    <li><span class="t">11:30 AM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Ecola+State+Park+Oregon" target="_blank" rel="noopener">Ecola State Park<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a>. Day use fee at the booth</span></li>
+    <li><span class="t word">Afternoon</span><span class="d">Nothing scheduled. Town, beach, whatever it turns into</span></li>
+    <li><span class="t">4:00 PM</span><span class="d">Leave for the Gorge</span></li>
+    <li><span class="t">6:15 PM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Multnomah+Falls+Oregon" target="_blank" rel="noopener">Multnomah Falls<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a><span class="fine">Arrive after 6 and you need no timed use permit. That permit runs 9 to 6 daily through September 7</span></span></li>
+    <li><span class="t">7:45 PM</span><span class="d"><a class="anchor" href="https://www.google.com/maps/search/?api=1&amp;query=Hyatt+Regency+Portland+Convention+Center" target="_blank" rel="noopener">Hyatt Regency, Portland<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></span></li>
+  </ul>
+</section>
+
+<!-- ══════════════ MONDAY ══════════════ -->
+<section id="mon" class="day">
+  <div class="day-head">
+    <span class="badge" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M21 12.5 3.5 8.8l2-2.4L9 7l1.5-4.2 2.4.5.4 4.4 5.4 1.2a1.6 1.6 0 0 1 1.2 1.5z"/></svg>
+    </span>
+    <div class="day-titles">
+      <h2>Monday, August 3</h2>
+      <p class="sub">Nothing but the flight.</p>
+    </div>
+  </div>
+  <ul class="tl">
+    <li><span class="t">4:45 AM</span><span class="d">Alarm</span></li>
+    <li><span class="t">5:15 AM</span><span class="d">Leave the hotel, return the car at PDX</span></li>
+    <li><span class="t">5:45 AM</span><span class="d">At the terminal<span class="fine">No PreCheck this trip, so take the full window</span></span></li>
+    <li><span class="t">7:35 AM</span><span class="d">Alaska to San Diego</span></li>
+  </ul>
+</section>
+
+<div class="wave" aria-hidden="true"><svg viewBox="0 0 400 14" preserveAspectRatio="none"><path d="M0 7q12.5-7 25 0t25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></div>
+
+<!-- ══════════════ THREE SUNSETS ══════════════ -->
+<section id="sunsets" class="band">
+  <p class="eyebrow">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 18h20"/><circle cx="12" cy="18" r="5"/><path d="M12 5v3M5 8l2 2M19 8l-2 2M2 22h20"/></svg>
+    Three sunsets
+  </p>
+  <h2>All three you can walk to</h2>
+  <p class="lede">Not one of them needs a drive afterward. That was the goal.</p>
+
+  <div class="sunsets">
+    <!-- Secret Beach: cove walls -->
+    <article class="sunset">
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" role="presentation">
+          <defs>
+            <linearGradient id="s1sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e3b47"/><stop offset=".55" stop-color="#c17f52"/><stop offset="1" stop-color="#f2bd80"/></linearGradient>
+            <linearGradient id="s1sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9a074"/><stop offset="1" stop-color="#8a7358"/></linearGradient>
+          </defs>
+          <rect width="320" height="132" fill="url(#s1sky)"/>
+          <circle cx="160" cy="126" r="86" fill="#ffdca6" opacity=".22"/>
+          <circle cx="160" cy="124" r="20" fill="#ffe9c4"/>
+          <rect y="128" width="320" height="14" fill="#4a6b6b"/>
+          <rect y="140" width="320" height="40" fill="url(#s1sand)"/>
+          <rect x="146" y="140" width="28" height="40" fill="#ffdca6" opacity=".38"/>
+          <path d="M0 180V26l16 6 20 14 18 20 14 24 10 30 6 34 4 26z" fill="#122726"/>
+          <path d="M320 180V14l-18 8-22 16-18 22-14 26-10 32-6 36-3 26z" fill="#0e2120"/>
+          <g fill="#0b1a19"><path d="M22 40l6-18 6 18zM40 54l5-16 5 16zM292 34l6-18 6 18zM276 50l5-16 5 16z"/></g>
+          <g stroke="#12403f" stroke-width="1.4" opacity=".5" fill="none"><path d="M0 152h320M0 164h320"/></g>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="when">Thursday</div>
+        <div class="name"><span>Secret Beach</span><span class="time">8:41</span></div>
+        <p>From the sand at the bottom of the cove.</p>
+      </div>
+    </article>
+
+    <!-- Cape Kiwanda: sandstone headland -->
+    <article class="sunset">
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" role="presentation">
+          <defs>
+            <linearGradient id="s2sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22404a"/><stop offset=".5" stop-color="#cf8b55"/><stop offset="1" stop-color="#f7cf94"/></linearGradient>
+            <linearGradient id="s2sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cda879"/><stop offset="1" stop-color="#8d765c"/></linearGradient>
+          </defs>
+          <rect width="320" height="126" fill="url(#s2sky)"/>
+          <circle cx="118" cy="120" r="80" fill="#ffdca6" opacity=".24"/>
+          <circle cx="118" cy="118" r="19" fill="#fff0d2"/>
+          <g fill="#f0cfa4" opacity=".34"><rect x="20" y="46" width="120" height="4" rx="2"/><rect x="60" y="62" width="150" height="3.5" rx="1.75"/><rect x="180" y="40" width="110" height="4" rx="2"/></g>
+          <rect y="122" width="320" height="20" fill="#4c6d6c"/>
+          <rect y="140" width="320" height="40" fill="url(#s2sand)"/>
+          <rect x="104" y="140" width="30" height="40" fill="#ffdca6" opacity=".4"/>
+          <path d="M320 180V56l-26 4-30 12-26 16-20 20-14 22-8 22-4 28z" fill="#a9764c"/>
+          <path d="M320 180V78l-22 6-24 14-20 18-14 20-8 22-4 22z" fill="#8a5c39"/>
+          <g fill="#123030"><path d="M244 96l7-20 7 20zM264 84l6-18 6 18zM286 74l6-18 6 18zM306 66l6-18 6 18z"/></g>
+          <path d="M186 180l14-26 10 14 8-10 16 22z" fill="#123030" opacity=".5"/>
+          <g stroke="#12403f" stroke-width="1.4" opacity=".45" fill="none"><path d="M0 150h190M0 162h150"/></g>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="when">Friday</div>
+        <div class="name"><span>Cape Kiwanda</span><span class="time">8:52</span></div>
+        <p>Walk from the dome.</p>
+      </div>
+    </article>
+
+    <!-- Haystack Rock -->
+    <article class="sunset">
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" role="presentation">
+          <defs>
+            <linearGradient id="s3sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c3a48"/><stop offset=".5" stop-color="#c8834f"/><stop offset="1" stop-color="#f6cd92"/></linearGradient>
+            <linearGradient id="s3sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c6a37d"/><stop offset="1" stop-color="#86745e"/></linearGradient>
+          </defs>
+          <rect width="320" height="126" fill="url(#s3sky)"/>
+          <circle cx="70" cy="122" r="78" fill="#ffdca6" opacity=".22"/>
+          <circle cx="70" cy="120" r="18" fill="#fff0d2"/>
+          <g fill="#f0cfa4" opacity=".3"><rect x="120" y="38" width="140" height="4" rx="2"/><rect x="90" y="56" width="110" height="3.5" rx="1.75"/></g>
+          <rect y="122" width="320" height="20" fill="#4a6b6b"/>
+          <rect y="140" width="320" height="40" fill="url(#s3sand)"/>
+          <rect x="56" y="140" width="28" height="40" fill="#ffdca6" opacity=".4"/>
+          <g fill="#11282a">
+            <path d="M170 142l3-18 5-13 6-9 5 8 4 13 3 19z"/>
+            <path d="M196 142l3-24 5-19 7-16 8-14 7-11 5-6 5 5 4 9 5 10 4-7 6 9 6 15 6 19 6 30z"/>
+            <path d="M288 142l3-22 6-16 6-10 6 11 5 15 4 22z"/>
+          </g>
+          <g fill="#0d1f20"><path d="M188 142q18-7 40-6t32 6z"/></g>
+          <g stroke="#1a2f30" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".65">
+            <path d="M148 44l6-5 6 5"/><path d="M172 30l5-4 5 4"/><path d="M128 62l5-4 5 4"/>
+          </g>
+          <g fill="#11282a" opacity=".22"><ellipse cx="234" cy="144" rx="52" ry="5"/></g>
+          <g stroke="#12403f" stroke-width="1.4" opacity=".4" fill="none"><path d="M0 152h320M0 166h240"/></g>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="when">Saturday</div>
+        <div class="name"><span>Haystack Rock</span><span class="time">8:50</span></div>
+        <p>Walk from the hotel.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════════ MUST-SEES ══════════════ -->
+<section class="band">
+  <p class="eyebrow">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>
+    Your must-sees, checked
+  </p>
+  <h2>Every one of them landed</h2>
+  <p class="lede">The only thing you gave up on the whole trip is the lighthouse beam lit at sunset.</p>
+
+  <ul class="checks">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg><span class="what">Natural Bridges, Boardman corridor</span><span class="where">Thu 5:30 PM</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg><span class="what">God&rsquo;s Thumb hike</span><span class="where">Sat 11:15 AM</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg><span class="what">Heceta Head from the pullout</span><span class="where">Fri 12:15 PM</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg><span class="what">Tillamook cheese and ice cream</span><span class="where">Sat 3:50 PM</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg><span class="what">Haystack Rock at sunset</span><span class="where">Sat 8:50 PM</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg><span class="what">Multnomah Falls</span><span class="where">Sun 6:15 PM</span></li>
+  </ul>
+</section>
+
+<!-- ══════════════ PACKING ══════════════ -->
+<section id="packing" class="band">
+  <p class="eyebrow">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
+    Before you go
+  </p>
+  <h2>Seven things to handle now</h2>
+
+  <ul class="packing">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3 3 5.5v15L9 18l6 3 6-2.5v-15L15 6z"/><path d="M9 3v15M15 6v15"/></svg><span>Offline maps for the full 101 stretch. Service drops hard between Gold Beach and Florence</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="10" r="5"/><path d="M6.5 7 3 4.5M17.5 7 21 4.5M12 15v6M8 21h8"/></svg><span>Headlamps for Thursday. You&rsquo;re climbing out of Secret Beach after dark</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18v-2l-6-3-2-4V5H8v7l-3 5z"/><path d="M8 9h5"/></svg><span>Hiking shoes for God&rsquo;s Thumb</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3 4 6v15h16V6l-5-3"/><path d="M9 3l3 4 3-4"/></svg><span>Layers and a rain shell. The coast runs cold in July even when Medford is 95</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 5.5h3"/></svg><span>Save the Pacific City food numbers now so you can order Friday from the road</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 4v4h-4"/></svg><span>Re-run AutoSlash before pickup in case the rate dropped since you booked</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v16"/><path d="M3 21h12M6 8h5"/><path d="M13 10h4a2 2 0 0 1 2 2v5a1.5 1.5 0 0 0 3 0V9l-3-3"/></svg><span>Fill the tank before the PDX return Monday</span></li>
+  </ul>
+</section>
+
+</main>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" role="presentation">
+      <defs>
+        <linearGradient id="fsky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0d1e24"/><stop offset=".7" stop-color="#173038"/><stop offset="1" stop-color="#25454a"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="300" fill="url(#fsky)"/>
+      <g fill="#e8dcc4" opacity=".5">
+        <circle cx="1180" cy="60" r="2"/><circle cx="1260" cy="98" r="1.6"/><circle cx="1330" cy="46" r="1.8"/>
+        <circle cx="240" cy="52" r="1.8"/><circle cx="360" cy="88" r="1.5"/><circle cx="120" cy="96" r="1.6"/>
+        <circle cx="700" cy="40" r="1.7"/><circle cx="880" cy="76" r="1.5"/><circle cx="540" cy="66" r="1.5"/>
+      </g>
+      <circle cx="1140" cy="96" r="26" fill="#f2e4c6" opacity=".82"/>
+      <circle cx="1130" cy="88" r="24" fill="#0d1e24" opacity=".92"/>
+      <rect y="238" width="1440" height="62" fill="#0b1719"/>
+      <g stroke="#4e7a76" stroke-width="2" opacity=".3" fill="none">
+        <path d="M0 250q60-8 120 0t120 0 120 0 120 0 120 0 120 0 120 0 120 0 120 0 120 0 120 0 120 0"/>
+        <path d="M0 268q60-8 120 0t120 0 120 0 120 0 120 0 120 0 120 0 120 0 120 0 120 0 120 0 120 0"/>
+      </g>
+      <g fill="#08110f">
+        <path d="M0 240V150l30 8 40 16 34 20 26 24 18 22z"/>
+        <path d="M1440 240V138l-34 10-42 18-34 22-26 26-16 26z"/>
+        <path d="M600 240l16-46 14-32 10-24 9 20 14 34 16 48z"/>
+        <path d="M660 240l10-30 9-22 7-16 6 14 9 22 10 32z"/>
+      </g>
+      <g fill="#050b0a">
+        <path d="M40 158l8-24 8 24zM66 168l7-22 7 22zM94 182l7-22 7 22zM120 198l6-20 6 20z"/>
+        <path d="M1396 148l8-24 8 24zM1368 158l7-22 7 22zM1340 172l7-22 7 22zM1314 190l6-20 6 20z"/>
+      </g>
+    </svg>
+  </div>
+  <div class="inner">
+    <p class="sig">Happy anniversary</p>
+    <p class="fine">Prepared for Matt and Thais &middot; v8 &middot; July 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -109,6 +109,11 @@ img,svg{max-width:100%;display:block}
   transition:color .18s,background .18s,border-color .18s;white-space:nowrap;
 }
 .nav a:hover,.nav a:focus-visible{color:var(--teal);background:var(--paper-2);border-color:var(--line)}
+.nav a.is-active{
+  color:var(--paper);background:var(--teal);border-color:var(--teal);
+  box-shadow:0 1px 10px -3px color-mix(in srgb,var(--teal) 70%,transparent);
+}
+.nav a.is-active:hover{color:var(--paper);background:var(--teal);border-color:var(--teal)}
 
 /* ---------- layout ---------- */
 main{width:var(--wrap);margin:0 auto;padding-bottom:1rem}
@@ -332,25 +337,24 @@ footer .fine{font-family:var(--sans);font-size:.6875rem;letter-spacing:.13em;tex
 
       <!-- sky -->
       <rect width="1440" height="472" fill="url(#sky)"/>
-      <circle cx="620" cy="470" r="280" fill="url(#glow)"/>
-      <circle cx="620" cy="466" r="54" fill="#ffe9c0"/>
+      <circle cx="520" cy="470" r="290" fill="url(#glow)"/>
+      <circle cx="520" cy="466" r="54" fill="#ffe9c0"/>
 
-      <!-- high thin clouds -->
-      <g fill="#f0cfa4" opacity=".32">
-        <rect x="120" y="228" width="380" height="7" rx="3.5"/>
-        <rect x="250" y="262" width="520" height="6" rx="3"/>
-        <rect x="660" y="196" width="300" height="6" rx="3"/>
-        <rect x="880" y="250" width="440" height="7" rx="3.5"/>
-        <rect x="1000" y="292" width="320" height="6" rx="3"/>
-        <rect x="420" y="320" width="360" height="5" rx="2.5"/>
+      <!-- soft banded cloud -->
+      <g fill="#f6d8ac" opacity=".2">
+        <ellipse cx="300" cy="236" rx="260" ry="11"/>
+        <ellipse cx="520" cy="272" rx="320" ry="9"/>
+        <ellipse cx="880" cy="212" rx="220" ry="10"/>
+        <ellipse cx="1080" cy="262" rx="290" ry="9"/>
+        <ellipse cx="700" cy="322" rx="300" ry="8"/>
       </g>
-      <g fill="#fff4e0" opacity=".15">
-        <ellipse cx="380" cy="366" rx="340" ry="15"/>
-        <ellipse cx="1090" cy="392" rx="360" ry="13"/>
+      <g fill="#fff4e0" opacity=".13">
+        <ellipse cx="380" cy="374" rx="340" ry="14"/>
+        <ellipse cx="1090" cy="398" rx="350" ry="12"/>
       </g>
 
       <!-- far sea stacks (fog layer) -->
-      <g fill="#84999５" opacity=".38">
+      <g fill="#8a9f9b" opacity=".34">
         <path d="M1188 472l6-42 8-26 10-16 9 18 8 30 7 36z"/>
         <path d="M1268 472l5-30 7-20 8-12 7 14 7 22 6 26z"/>
         <path d="M1344 472l4-22 6-16 7-10 6 12 6 16 5 20z"/>
@@ -370,40 +374,18 @@ footer .fine{font-family:var(--sans);font-size:.6875rem;letter-spacing:.13em;tex
         </g>
       </g>
 
-      <!-- HAYSTACK ROCK — broad craggy monolith, twin crown -->
-      <g fill="#122829">
-        <path d="M676 622l6-46 10-32 10-24 8-12 8 14 8 26 8 34 6 40z"/>
-        <path d="M745 622l5-58 8-44 12-38 14-32 14-28 12-22 10-16 8-8 8 6 8 18 8 24 8-12 10 16 12 32 12 40 12 48 12 56 14 60z"/>
-        <path d="M1032 622l6-56 10-42 12-30 10-16 10 20 10 32 10 44 12 48z"/>
-      </g>
-      <!-- rock crag texture -->
-      <g stroke="#2f4a4c" stroke-width="2.2" opacity=".45" fill="none" stroke-linecap="round">
-        <path d="M790 560l18-30 14 22"/>
-        <path d="M812 486l16-26 12 20"/>
-        <path d="M840 412l14-22 10 16"/>
-        <path d="M862 348l10-16 10 14"/>
-        <path d="M912 470l14-24 12 18"/>
-        <path d="M936 546l16-26 12 20"/>
-      </g>
-      <!-- talus base -->
-      <g fill="#0d2021">
-        <path d="M722 622q40-16 92-14t76 12z"/>
-        <path d="M900 622q34-14 78-12t56 12z"/>
-      </g>
-
       <!-- birds -->
-      <g stroke="#1a2f30" stroke-width="2.8" fill="none" stroke-linecap="round" opacity=".68">
-        <path d="M560 196l12-10 12 10"/>
-        <path d="M614 164l10-8 10 8"/>
-        <path d="M660 208l11-9 11 9"/>
-        <path d="M516 246l9-7 9 7"/>
-        <path d="M1004 190l10-8 10 8"/>
+      <g stroke="#22383a" stroke-width="2" fill="none" stroke-linecap="round" opacity=".55">
+        <path d="M1002 224l7-6 7 6"/>
+        <path d="M1046 196l6-5 6 5"/>
+        <path d="M1080 236l6-5 6 5"/>
+        <path d="M968 262l5-4 5 4"/>
       </g>
 
       <!-- ocean -->
       <rect x="0" y="470" width="1440" height="154" fill="url(#sea)"/>
       <g clip-path="url(#clipSea)">
-        <rect x="584" y="470" width="72" height="154" fill="url(#refl)"/>
+        <rect x="484" y="470" width="72" height="154" fill="url(#refl)"/>
         <g stroke="#ffdcaa" stroke-width="2" opacity=".2" fill="none">
           <path d="M0 500h320M370 500h400M820 500h620"/>
           <path d="M60 522h380M490 522h280M830 522h610"/>
@@ -420,7 +402,7 @@ footer .fine{font-family:var(--sans);font-size:.6875rem;letter-spacing:.13em;tex
       <!-- wet sand -->
       <rect x="0" y="620" width="1440" height="280" fill="url(#beach)"/>
       <g clip-path="url(#clipSand)">
-        <rect x="548" y="620" width="146" height="280" fill="url(#refl)" opacity=".6"/>
+        <rect x="486" y="620" width="70" height="280" fill="url(#refl)" opacity=".4"/>
         <g fill="#0f2223" opacity=".22">
           <ellipse cx="884" cy="632" rx="150" ry="11"/>
           <ellipse cx="712" cy="628" rx="46" ry="6"/>
@@ -436,6 +418,24 @@ footer .fine{font-family:var(--sans);font-size:.6875rem;letter-spacing:.13em;tex
           <ellipse cx="252" cy="852" rx="34" ry="10"/>
         </g>
       </g>
+
+      <!-- ══ HAYSTACK ROCK ══ drawn last: it stands on the wet sand, in front of the water -->
+      <g clip-path="url(#clipSand)">
+        <path d="M600 700 L1040 700 L980 796 L660 796 Z" fill="#0a1617" opacity=".15"/>
+      </g>
+      <g fill="#0f1e20">
+        <path d="M1058 700c4-38 10-70 20-96 8-22 16-34 24-36 8 2 16 14 24 36 10 26 16 58 20 96z"/>
+        <path d="M1148 700c3-24 8-44 16-58 5-9 10-14 15-15 5 1 10 6 15 15 8 14 13 34 16 58z"/>
+        <path d="M600 700c6-54 16-102 30-146 14-42 32-80 50-112 16-28 32-52 48-72 12-16 24-26 36-32 8-4 16-2 22 4 8 8 14 18 20 30 6-12 14-18 22-16 10 2 18 14 26 32 12 26 24 58 34 94 12 40 22 84 32 128 10 40 22 68 36 80 16 10 44 10 84 10z"/>
+      </g>
+      <!-- fissures -->
+      <g stroke="#071011" stroke-width="3.2" opacity=".3" fill="none" stroke-linecap="round">
+        <path d="M672 694c14-72 30-140 50-196"/>
+        <path d="M792 696c4-76 8-146 12-198"/>
+        <path d="M886 698c-6-56-16-110-28-152"/>
+      </g>
+      <!-- wet base -->
+      <ellipse cx="820" cy="702" rx="232" ry="11" fill="#0a1516" opacity=".55"/>
     </svg>
   </div>
   <div class="hero-scrim" aria-hidden="true"></div>
@@ -466,6 +466,7 @@ footer .fine{font-family:var(--sans);font-size:.6875rem;letter-spacing:.13em;tex
     <a href="#sun">Sun 8/2</a>
     <a href="#mon">Mon 8/3</a>
     <a href="#sunsets">Sunsets</a>
+    <a href="#mustsees">Must-sees</a>
     <a href="#packing">Pack</a>
   </div>
 </nav>
@@ -793,7 +794,7 @@ footer .fine{font-family:var(--sans);font-size:.6875rem;letter-spacing:.13em;tex
 </section>
 
 <!-- ══════════════ MUST-SEES ══════════════ -->
-<section class="band">
+<section id="mustsees" class="band">
   <p class="eyebrow">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>
     Your must-sees, checked
@@ -871,6 +872,86 @@ footer .fine{font-family:var(--sans);font-size:.6875rem;letter-spacing:.13em;tex
     <p class="fine">Prepared for Matt and Thais &middot; v8 &middot; July 2026</p>
   </div>
 </footer>
+
+<script>
+(function () {
+  var ORDER = ['locked','tides','thu','fri','sat','sun','mon','sunsets','mustsees','packing'];
+  var secs = [], links = [];
+  ORDER.forEach(function (id) {
+    var s = document.getElementById(id);
+    var a = document.querySelector('.nav a[href="#' + id + '"]');
+    if (s && a) { secs.push(s); links.push(a); }
+  });
+  if (!secs.length) return;
+
+  var strip = document.querySelector('.nav-scroll');
+  var current = -1;
+  var lockUntil = 0;
+
+  function setActive(i) {
+    if (i < 0 || i >= secs.length || i === current) return;
+    current = i;
+    links.forEach(function (a, n) {
+      var on = n === i;
+      a.classList.toggle('is-active', on);
+      if (on) { a.setAttribute('aria-current', 'true'); } else { a.removeAttribute('aria-current'); }
+    });
+    if (strip) {
+      var a = links[i];
+      var left = a.offsetLeft - (strip.clientWidth - a.offsetWidth) / 2;
+      left = Math.max(0, Math.min(left, strip.scrollWidth - strip.clientWidth));
+      if (strip.scrollTo) { strip.scrollTo({ left: left, behavior: 'smooth' }); } else { strip.scrollLeft = left; }
+    }
+  }
+
+  /* scroll-spy: the last section whose top has passed under the sticky nav wins */
+  var queued = false;
+  function spy() {
+    queued = false;
+    if (Date.now() < lockUntil) return;
+    var idx = 0;
+    for (var i = 0; i < secs.length; i++) {
+      if (secs[i].getBoundingClientRect().top <= 80) idx = i;
+    }
+    setActive(idx);
+  }
+  function onScroll() {
+    if (!queued) { queued = true; requestAnimationFrame(spy); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  spy();
+
+  function go(i) {
+    if (i < 0 || i >= secs.length) return;
+    lockUntil = Date.now() + 700;
+    setActive(i);
+    secs[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  links.forEach(function (a, i) {
+    a.addEventListener('click', function () { lockUntil = Date.now() + 700; setActive(i); });
+  });
+
+  /* horizontal swipe moves one section at a time */
+  var x0 = null, y0 = 0, t0 = 0;
+  document.addEventListener('touchstart', function (e) {
+    if (e.touches.length !== 1 || (e.target.closest && e.target.closest('.nav'))) { x0 = null; return; }
+    x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; t0 = Date.now();
+  }, { passive: true });
+
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - x0, dy = t.clientY - y0;
+    x0 = null;
+    if (Date.now() - t0 > 800) return;
+    if (Math.abs(dx) < 60) return;
+    if (Math.abs(dx) < Math.abs(dy) * 1.6) return;
+    go(dx < 0 ? current + 1 : current - 1);
+  }, { passive: true });
+})();
+</script>
 
 </body>
 </html>
